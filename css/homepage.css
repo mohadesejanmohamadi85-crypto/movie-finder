@@ -1,0 +1,138 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #121212;
+  color: white;
+}
+.header {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.logo {
+  width: 116px;
+  height: 58px;
+}
+.search-box {
+  width: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: inherit;
+  outline: none;
+}
+.search::placeholder {
+  color: #888;
+}
+.search-icon {
+  position: absolute;
+  right: 20px;
+  width: 16px;
+}
+.genre-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: inherit;
+  padding: 8px 20px 8px 8px;
+  cursor: pointer;
+  background-image: url("../img/icon1.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 10px;
+}
+.hero {
+  max-width: 1440px;
+  height: 688px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  background-image: url(../img/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+.hero-content {
+  width: 500px;
+  align-self: center;
+  position: absolute;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+}
+.hero-title {
+  font-size: 55px;
+  color: white;
+  line-height: 1.1;
+}
+.hero-genres {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.genre-tag,.genre-chip {
+  border: 0.5px solid white;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.hero-overview {
+  font-size: 19px;
+  color: #ddd;
+}
+.hero-badge {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+.hero-dots {
+  width: 96px;
+  height: 24px;
+  background-color: rgba(37, 37, 37, 0.55);
+  display: flex;
+  gap: 5px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin: 40px auto;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #9c9c9c;
+  border-radius: 50%;
+}
+.dot.active {
+  background-color: white;
+}
+

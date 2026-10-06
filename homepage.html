@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+</head>
+<body>
+    <section class="hero" id="heroSection">
+        <header class="header">
+        <div >
+            <img class="logo" src="./img/648ba84eb120c9973cb6a2302b0d0eb940fd18ce.png" alt="logo">
+        </div>
+        <div class="search-box" >
+            <img src="./img/icon.png" alt="search" class="search-icon">
+            <input type="search" id="searchInput" name="search" placeholder="Search IMDb" class="search">
+        </div>
+        <div class="genre-wrapper">
+        <select id="genreSelect" class="genre-select">
+           <option value="">Genres </option>
+           <option value="28">Action</option>
+           <option value="12">Adventure</option>
+           <option value="16">Animation</option>
+           <option value="99">Biography</option>
+           <option value="35">Comedy</option>
+           <option value="80">Crime</option>
+           <option value="18">Drama</option>
+        </select>
+        </div>
+    </header>
+       <div class="hero-content">
+        <h1 id="heroTitle" class="hero-title">Dune:Part Two</h1>
+        <div id="heroGenres" class="hero-genres">
+            <div class="genre-tag ">Action</div>
+            <div class="genre-chip ">Adventure</div>
+            <div class="genre-tag ">Drama</div>
+        </div>
+        <p id="heroOverview" class="hero-overview">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</p>
+        <span class="hero-badge ">In Theaters</span>
+       </div>
+       <div class="hero-dots">
+        <div class="active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+</body>
+</html>
