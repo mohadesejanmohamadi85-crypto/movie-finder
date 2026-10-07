@@ -76,6 +76,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
+  position: relative;
 }
 .hero-content {
   width: 500px;
@@ -138,6 +139,51 @@ body {
 .dot.active {
   background-color: white;
 }
+.movie-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  position: absolute;
+  top: 10%;
+}
+.movie-grid{
+ width: 865px;
+ height: auto;
+ background-color:rgba(26, 26, 26, 1);
+ border-radius: 10px;
+ }
+ .movie-card{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ }
+ .movie-poster{
+  height: 117px;
+  max-width: 80px;
+  margin-top: 20px;
+  margin-left: 15px;
+ }
+ .movie-info{
+  line-height: 30px;
+ }
+ .movie-title{
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+ }
+ .movie-btn{
+  color: rgba(188, 188, 188, 1);
+  font-weight: 500;
+ }
+ .no-result {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 18px;
+  color: #888888;
+  font-weight: 700;
+}
 @media(max-width:1023px){
   .hero{
     background-position: center center;
@@ -158,6 +204,20 @@ body {
   .hero-badge{
     font-size: 17px;
   }
+  .movie-grid{
+    max-width: 500px;
+    margin-left: 30px;
+  }
+  .error-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 18px;
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
 }
 @media(max-width:767px){
   .hero{
@@ -178,17 +238,29 @@ body {
  }
  .hero-content{
   padding-top: 20px;
-  width: 280px;
+  max-width: 280px;
   left: 4%;
  }
  .hero-overview{
   font-size: 15px;
  }
  .hero-dots{
-  width: 80px;
+  max-width: 80px;
   margin:20px auto;
  }
- 
+ .movie-grid{
+  max-width: 265px;
+  margin-right: 40px;
+ }
+ .movie-title{
+  font-size: 16px;
+ }
+ .movie-card{
+  gap: 15px;
+ }
+ .movie-btn{
+  padding-right: 15px;
+ }
  
 }
 
