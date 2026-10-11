@@ -1,14 +1,15 @@
-
-
 const searchInput = document.querySelector("#searchInput");
 const moviesGrid = document.querySelector(".movie-grid");
+const movieGrid = document.querySelector(".movies-grid");
 searchInput.addEventListener("input", () => {
   const searchTerm = searchInput.value.trim();
   if (searchTerm.length === 0) {
     moviesGrid.innerHTML = "";
     return;
   }
-  fetch(`https://moviesapi.ir/api/v1/movies?q=${encodeURIComponent(searchTerm)}`)
+  fetch(
+    `https://moviesapi.ir/api/v1/movies?q=${encodeURIComponent(searchTerm)}`,
+  )
     .then((response) => {
       if (response.ok) {
         return response.json();
@@ -18,6 +19,7 @@ searchInput.addEventListener("input", () => {
       });
     })
     .then((data) => {
+      console.log(data);
       const movies = data.data;
       moviesGrid.innerHTML = "";
       if (!movies || movies.length === 0) {
@@ -30,12 +32,10 @@ searchInput.addEventListener("input", () => {
         card.onclick = () => {
           location.href = `details.html?id=${movie.id}`;
         };
-        card.innerHTML = 
-        `<img src="${movie.poster || './img/download.jfif'}"
+        card.innerHTML = `<img src="${movie.poster || "./img/download.jfif"}"
             alt="${movie.title}" 
             class="movie-poster"
-            onerror="this.src='./img/placeholder.svg'"
-          >
+            onerror="this.src='./img/download.jfif'">
           <div class="movie-info">
             <h3 class="movie-title">${movie.title}</h3>
             <div class="movie-footer">
@@ -51,6 +51,28 @@ searchInput.addEventListener("input", () => {
       console.log(error.message);
     });
 });
-
-
-
+fetch("https://moviesapi.ir/api/v1/movies?page=1")
+  .then((res) => res.json())
+  .then((data) => {
+    moviesGrid.innerHTML = "";
+    data.data.forEach((movie) => {
+      const box = document.createElement("article");
+      box.className = "moviecard";
+      box.onclick = () => {
+        location.href = `details.html?id=${movie.id}`;
+      };
+      box.innerHTML = `
+      <article class="moviecard">
+      <img src="${movie.poster}" alt="${movie.title}" class="movieposter">
+      <div class="movieinfo">
+      <h3 class="movietitle">${movie.title}</h3>
+      <p class="moviegenre">${movie.genres}</p>
+      <div class="moviefooter">
+      <span class="movierating"><img src="./img/Vector (5).png" alt="star" > ${movie.imdb_rating}</span>
+      <span class="moviebtn">View Info</span>
+      </div>
+      </div>
+      </article>`;
+      movieGrid.appendChild(box);
+    });
+  });

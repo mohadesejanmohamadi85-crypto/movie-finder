@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/details.css">
+    <script src="./js/details.js" defer></script>
+</head>
+<body>
+   <header class="header">
+        <div>
+            <img class="logo" src="./img/648ba84eb120c9973cb6a2302b0d0eb940fd18ce.png" alt="logo">
+        </div>
+        <div class="search-box">
+            <img src="./img/icon.png" alt="search" class="search-icon">
+            <input type="search" id="searchInput" name="search" placeholder="Search IMDb" class="search">
+        </div>
+        <div class="genre-wrapper">
+            <select id="genreSelect" class="genre-select">
+                <option value="" class="item">Genres </option>
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="99">Biography</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="18">Drama</option>
+            </select>
+        </div>
+    </header>
+    <main class="details-container" id="detailsContainer">
+        <p class="loading">در حال بارگذاری...</p>
+    </main>
+    <div class="m"></div>
+    <!--<footer class="footer">
+        <p class="copyright">© 2025 by Karyar Studio</p>
+    </footer>-->
+</body>
+</html>
