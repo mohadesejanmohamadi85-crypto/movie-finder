@@ -1,5 +1,10 @@
-
-
+.header {
+  max-width: 1323px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
+}
 .details-header-left{
     display: flex;
     padding-left: 10px;
@@ -60,6 +65,7 @@
     border-radius: 45px;
     border: none;
     outline: none;
+    color: rgba(195, 195, 195, 1);
 }
 .details-label{
     font-weight: 600;
@@ -76,7 +82,7 @@
 }
 .details-text{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     color: rgba(195, 195, 195, 1);
 }
 .backdrop-img{
@@ -99,6 +105,7 @@
     font-size: 28px;
     color:rgba(195, 195, 195, 1);
     margin-top: 20px;
+    padding-left: 10px;
 }
 .cast-photo{
     width: 181px;
@@ -125,36 +132,83 @@
     flex-direction: column;
     gap: 15px;
 }
-.header {
-  max-width: 1323px;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin: 0 auto;
+.footer{
+    max-width: 1323px;
+    margin: auto;
 }
-
-
+.copyright{
+    text-align: center;
+    color: rgba(188, 188, 188, 1);
+    font-weight: 400;
+    font-size: 20px;
+}
 @media(max-width:1023px){
-    body{
-       
-       background-color: brown;
-       max-width: 1023px;
-       
-       
-    }
-    .header{
-            width: 100%;
-            background-color: aqua;
-           
-        }
-        .details-container{
-            width: 100%;
-        }
-  
+   .movie-poster{
+       max-width:170px;
+   }
+   .backdrop-img{
+       max-width:150px;
+       height: 200px;
+   }
+   .cast-photo{
+       max-width:130px;
+   }
 }
 @media (max-width: 767px) {
-  .header-page-details {
-    padding: 10px 16px;
-    gap: 8px;
-  }
+    body{
+        margin: auto;
+    }
+    .header{
+        gap: 15px;
+        padding-left: 40px;
+    }
+    .movie-poster{
+        max-width:100px;
+        height: 410px;
+   }
+   .backdrop-img{
+       max-width:80px;
+       height: 80px;
+   }
+   .cast-photo{
+       max-width:80px;
+       height: 80px;
+   }
+   .cast-grid{
+       gap: 10px;
+       padding-left: 5px;
+   }
+   .details-text{
+       font-size: 12px;
+   }
+   .details-backdrops{
+       gap: 20px;
+   } 
+   .search{
+       width: 400px;
+   }
+   .details-rating-btn{
+       padding:10px;
+   }
+   .details-title{
+       font-size: 25px;
+   }
+   .details-body{
+       gap: 20px;
+   }
+   .cast-name{
+       font-size: 13px;
+   }
+   .details-header{
+       padding-left: 15px;
+   }
+   .cast-title{
+       font-size: 20px;
+   }
+   .details-info{
+       padding-right: 5px;
+   }
+   .copyright{
+    font-size: 15px;
+   }
 }

@@ -49,7 +49,7 @@ detailsContainer.innerHTML=`
       <img src="./img/Vector (5).png" alt="rating star" class="details-star">
       <span class="details-rating">${movie.imdb_rating}</span>
       <span class="details-max">/10</span>
-      <span class="details-votes">(${movie.imdb_votes})</span>
+      <span class="details-votes">${movie.imdb_votes}</span>
     </button>
   </div>
  </div>
