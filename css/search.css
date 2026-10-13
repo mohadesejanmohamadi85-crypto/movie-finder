@@ -1,0 +1,24 @@
+
+.search-section{
+    max-width:1323px ;
+    margin: 50px auto;
+    padding: 50px 25px 0 15px;
+}
+.search-title{
+    margin-bottom: 30px;
+}
+.moviecard{
+    max-width: 100%;
+    height: 540px;
+}
+.movietitle{
+    font-size: 15px;
+}
+@media(max-width:767px){
+    .search-title{
+       font-size: 17px;
+    }
+    .search{
+        max-width: 600px;
+    }
+}
