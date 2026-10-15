@@ -1,0 +1,191 @@
+.genres-container {
+  max-width: 1370px;
+  margin: 50px auto;
+  padding-top: 50px;
+}
+.genres-layout {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.genres-content {
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+}
+.genres-heading {
+  font-weight: 400;
+  font-size: 28px;
+  color: rgba(195, 195, 195, 1);
+}
+.genre-item {
+  font-size: 16px;
+  color: rgba(195, 195, 195, 1);
+  font-weight: 600;
+  list-style: none;
+}
+.sort-text {
+  color: rgba(121, 121, 121, 1);
+  display: inline-block;
+  max-width: 195px;
+  background-color: rgba(163, 163, 163, 0.05);
+  padding: 8px 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sort-value {
+  color: rgba(195, 195, 195, 1);
+}
+.genres-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.sort-icon {
+  padding-left: 10px;
+}
+.genres-count {
+  color: rgba(121, 121, 121, 1);
+}
+.genres-sidebar {
+  width: 24%;
+  padding: 30px;
+  background-color: rgba(163, 163, 163, 0.05);
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+}
+.genres-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.genres-heading {
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+.movie-item-poster {
+  max-width: 126px;
+  height: 194px;
+  border-radius: 5px;
+}
+.movie-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(195, 195, 195, 1);
+}
+.movie-item-meta,
+.movie-item-rating {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(121, 121, 121, 1);
+}
+.movie-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: rgba(163, 163, 163, 0.05);
+}
+.movie-item-plot {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(195, 195, 195, 1);
+}
+.movie-item-detail {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(195, 195, 195, 1);
+}
+.movie-item-info {
+  line-height: 50px;
+}
+.movie-item-genre {
+  display: inline-block;
+  background-color: rgba(163, 163, 163, 0.15);
+  border-radius: 45px;
+  width: 85px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(195, 195, 195, 1);
+}
+.movie-item-genres {
+  display: flex;
+  gap: 15px;
+}
+.adventure {
+  width: 115px;
+}
+@media (max-width: 1023px) {
+  .genres-heading {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .genres-sidebar {
+    width: 50%;
+  }
+  .genres-layout {
+    justify-content: center;
+    gap: 20px;
+  }
+  .movie-item {
+    padding: 10px;
+    width: 90%;
+    flex-direction: column;
+  }
+  .movie-item-poster {
+    max-width: 210px;
+  }
+  .movie-item-genre {
+    border-radius: 20px;
+    font-size: 11px;
+    padding: 5px;
+  }
+  .movie-item-title {
+    font-size: 14px;
+  }
+  .movie-item-plot {
+    font-size: 14px;
+  }
+  .movie-item-detail {
+    font-size: 14px;
+  }
+  .movie-item-meta {
+    font-size: 14px;
+  }
+  .genre-item {
+    font-size: 13px;
+  }
+  .genres-heading {
+    font-size: 14px;
+  }
+  .scrollbar {
+    padding-left: 40px;
+  }
+  .sort-text {
+    font-size: 12px;
+  }
+  .genres-content {
+    font-size: 12px;
+  }
+  .genres-top {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .genres-layout {
+    padding-left: 50px;
+  }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genres - Movie Finder</title>
+    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/genres.css" />
+    <script src="./js/genres.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img
+          class="logo"
+          src="./img/648ba84eb120c9973cb6a2302b0d0eb940fd18ce.png"
+          alt="logo"
+        />
+      </div>
+      <div class="search-box">
+        <img src="./img/icon.png" alt="search" class="search-icon" />
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search IMDb"
+          class="search"
+        />
+      </div>
+      <div class="genre-wrapper">
+        <select id="genreSelect" class="genre-select">
+          <option value="">Genres</option>
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Animation">Animation</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Crime">Crime</option>
+          <option value="Drama">Drama</option>
+        </select>
+      </div>
+    </header>
+    <main class="genres-container">
+      <h1 class="genres-heading">Genres</h1>
+      <div class="genres-layout">
+        <aside class="genres-sidebar">
+          <ul class="genres-list" id="genresList">
+            <li class="genre-item" data-id="28">Action</li>
+            <li class="genre-item" data-id="12">Adventure</li>
+            <li class="genre-item" data-id="16">Animation</li>
+            <li class="genre-item" data-id="35">Comedy</li>
+            <li class="genre-item" data-id="80">Crime</li>
+            <li class="genre-item" data-id="18">Drama</li>
+            <li class="genre-item" data-id="10751">Family</li>
+            <li class="genre-item" data-id="14">Fantasy</li>
+            <li class="genre-item" data-id="27">Horror</li>
+            <li class="genre-item" data-id="10749">Romance</li>
+          </ul>
+          <img src="./img/Frame 243.png" alt="سایدبار" class="scrollbar" />
+        </aside>
+        <section class="genres-content">
+          <div class="genres-top">
+            <span class="sort-text"
+              >Sort by: <span class="sort-value">Ranking</span
+              ><img
+                src="./img/Vector (7).png"
+                alt="sort icon"
+                class="sort-icon"
+            /></span>
+            <span class="genres-count" id="genresCount">Loading...</span>
+          </div>
+          <div class="movies-list" id="moviesList">
+            <div class="loading">در حال بارگذاری...</div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

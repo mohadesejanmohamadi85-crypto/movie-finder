@@ -14,12 +14,11 @@ searchInput.addEventListener("input", () => {
       if (response.ok) {
         return response.json();
       }
-      return response.json().then((qw) => {
-        throw new Error(qw.message);
+      return response.json().then((error) => {
+        throw new Error(error.message);
       });
     })
     .then((data) => {
-      console.log(data);
       const movies = data.data;
       moviesGrid.innerHTML = "";
       if (!movies || movies.length === 0) {
@@ -42,19 +41,17 @@ searchInput.addEventListener("input", () => {
               <span class="movie-btn">View Info</span>
             </div>
           </div>`;
-
         moviesGrid.appendChild(card);
       });
     })
     .catch((error) => {
       moviesGrid.innerHTML = `<p class="error-message">${error.message}</p>`;
-      console.log(error.message);
     });
 });
 fetch("https://moviesapi.ir/api/v1/movies?page=1")
   .then((res) => res.json())
   .then((data) => {
-    moviesGrid.innerHTML = "";
+    movieGrid.innerHTML = "";
     data.data.forEach((movie) => {
       const box = document.createElement("article");
       box.className = "moviecard";
