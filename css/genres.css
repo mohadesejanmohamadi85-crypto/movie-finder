@@ -173,7 +173,7 @@
     padding-left: 40px;
   }
   .sort-text {
-    font-size: 12px;
+    font-size: 11px;
   }
   .genres-content {
     font-size: 12px;
@@ -186,6 +186,6 @@
     gap: 30px;
   }
   .genres-layout {
-    padding-left: 50px;
+    padding-left: 40px;
   }
 }

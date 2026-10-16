@@ -145,6 +145,12 @@
   font-size: 20px;
   padding-top: 0;
 }
+.loading{
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 1023px) {
   .movie-poster {
     max-width: 170px;
@@ -199,10 +205,12 @@
     width: 650px;
   }
   .details-rating-btn {
-    padding: 10px;
+    font-size: 11px;
+    transform: translateX(18px);
   }
   .details-title {
-    font-size: 25px;
+    font-size: 20px;
+    padding-left: 10px;
   }
   .details-body {
     gap: 20px;
@@ -211,7 +219,8 @@
     font-size: 13px;
   }
   .details-header {
-    padding-left: 15px;
+    justify-content: center;
+    gap: 70px;
   }
   .cast-title {
     font-size: 20px;
