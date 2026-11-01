@@ -125,6 +125,10 @@
 .adventure {
   width: 115px;
 }
+.movie-section{
+  max-width: 1370px;
+  margin: auto;
+}
 @media (max-width: 1023px) {
   .genres-heading {
     font-size: 20px;

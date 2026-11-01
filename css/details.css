@@ -151,6 +151,11 @@
   justify-content: center;
   align-items: center;
 }
+.movie-poster1{
+  height: 200px;
+  padding: 10px;
+  width: 200px;
+}
 @media (max-width: 1023px) {
   .movie-poster {
     max-width: 170px;

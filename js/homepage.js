@@ -73,3 +73,19 @@ fetch("https://moviesapi.ir/api/v1/movies?page=1")
       movieGrid.appendChild(box);
     });
   });
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    alert("اینتر زده شد کلمه سرچ شده: " + searchInput.value);
+    const query = searchInput.value.trim();
+    if (query !== "") {
+      window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+  }
+});
+const genreSelect = document.getElementById("genreSelect");
+genreSelect.addEventListener("change", function () {
+  const selectedGenreId = genreSelect.value;
+  if (selectedGenreId !== "") {
+    window.location.href = `genre.html?id=${selectedGenreId}`;
+  }
+});

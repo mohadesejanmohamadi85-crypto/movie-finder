@@ -1,4 +1,6 @@
 const params = new URLSearchParams(window.location.search);
+const searchInput = document.querySelector("#searchInput");
+const moviesGrid = document.querySelector(".movie-grid");
 const movieId = params.get("id");
 const detailsContainer = document.getElementById("detailsContainer");
 if (!movieId) {
@@ -99,3 +101,66 @@ function renderMovieDetails(movie) {
   </div>
 </div>`;
 }
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.trim();
+  if (searchTerm.length === 0) {
+    moviesGrid.innerHTML = "";
+    return;
+  }
+  fetch(
+    `https://moviesapi.ir/api/v1/movies?q=${encodeURIComponent(searchTerm)}`,
+  )
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+      return response.json().then((error) => {
+        throw new Error(error.message);
+      });
+    })
+    .then((data) => {
+      const movies = data.data;
+      moviesGrid.innerHTML = "";
+      if (!movies || movies.length === 0) {
+        moviesGrid.innerHTML = '<p class="no-result">نتیجه‌ای یافت نشد</p>';
+        return;
+      }
+      movies.forEach((movie) => {
+        const card = document.createElement("article");
+        card.className = "movie-card";
+        card.onclick = () => {
+          location.href = `details.html?id=${movie.id}`;
+        };
+        card.innerHTML = `<img src="${movie.poster || "./img/download.jfif"}"
+            alt="${movie.title}" 
+            class="movie-poster1"
+            onerror="this.src='./img/download.jfif'">
+          <div class="movie-info">
+            <h3 class="movie-title">${movie.title}</h3>
+            <div class="movie-footer">
+              <span class="movie-btn">View Info</span>
+            </div>
+          </div>`;
+        moviesGrid.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      moviesGrid.innerHTML = `<p class="error-message">${error.message}</p>`;
+    });
+});
+const genreSelect = document.getElementById("genreSelect");
+genreSelect.addEventListener("change", function () {
+  const selectedGenreId = genreSelect.value;
+  if (selectedGenreId !== "") {
+    window.location.href = `genre.html?id=${selectedGenreId}`;
+  }
+});
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    alert("اینتر زده شد کلمه سرچ شده: " + searchInput.value);
+    const query = searchInput.value.trim();
+    if (query !== "") {
+      window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+    }
+  }
+});
